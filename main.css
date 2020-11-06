@@ -1,0 +1,53 @@
+:root {
+  /*   color variables */
+  --clr-negative: #ff1744;
+  --clr-positive: #2abf77;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  background-color: var(--clr-gray100);
+  color: var(--clr-gray500);
+}
+
+#counter {
+  font-size: 6rem;
+}
+
+/**/
+
+.negative {
+  color: var(--clr-negative);
+  animation: pulse 500ms ease-in-out;
+}
+
+.positive {
+  color: var(--clr-positive);
+  animation: pulse 500ms ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
